@@ -81,10 +81,10 @@ function saveLocalTodos(todo) {
   let todos;
   if (localStorage.getItem("todos") === null) todo = [];
   else {
-    todos = JSON.parse(localStorage.getItem("todos"));
+    todos = JSON.parse(localStorage.getItem("todos")); //converinto array
   }
-  todos.push(todo);
-  localStorage.setItem("todos", JSON.stringify(todos));
+  todos.push(todo); // push a new element to the array
+  localStorage.setItem("todos", JSON.stringify(todos)); // again convert into string & set to localstorage
 }
 
 // getting the todo from local storage when we load the page
